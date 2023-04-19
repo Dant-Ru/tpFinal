@@ -110,10 +110,6 @@ $(document).ready(function() {
           required: true,
           number: true,
         },
-        ciudad:{
-          required: true,
-          minlength: 2,
-        },
         fecha:{
           required: true,
         },
@@ -138,11 +134,6 @@ $(document).ready(function() {
         telefono:{
           required: "*Por favor, introduzca un telefono",
           number: "*Por favor, introduce un telefono válido"
-        },
-
-        ciudad:{
-          required: "*Por favor, introduzca su ciudad",
-          minlength: "*el nombre ingresado es muy corto"
         },
 
         fecha:{
