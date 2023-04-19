@@ -75,7 +75,12 @@ $(document).ready(function() {
             // ...
             // Crear un nuevo objeto jsPDF
             var pdf = new jsPDF();
-
+              
+            pdf.text(cotizacion);
+            pdf.save('imprecion.pdf') 
+          
+          
+            /*
             // Agregar el resumen al documento PDF
             pdf.text(cotizacion, 10, 10);
 
@@ -90,12 +95,13 @@ $(document).ready(function() {
 
             // Liberar el objeto Blob
             URL.revokeObjectURL(pdfBlob);
-        
+        */
         }
     });
+  });
 
     $(function(){  
-      $("form[name='formulario']").validate({
+      $("#forumalario-contacto").validate({
         rules:{
           nombre:{
             required: true,
@@ -112,7 +118,7 @@ $(document).ready(function() {
             required: true,
             number: true,
           },
-          
+
           fecha:{
             required: true,
           },
@@ -185,7 +191,6 @@ $(document).ready(function() {
     });
   
   });
-});
 
   function generarPDF() {
     // Obtener los valores del formulario
