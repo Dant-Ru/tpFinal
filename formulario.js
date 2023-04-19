@@ -94,58 +94,60 @@ $(document).ready(function() {
         }
     });
 
-$(function() {
-    $('#formulario-contacto').validate({
-      rules:{
-        nombre:{
-          required: true,
-          minlength: 3,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        provincia:{
-          required: true,
-        },
-        telefono:{
-          required: true,
-          number: true,
-        },
-        fecha:{
-          required: true,
-        },
-        mensaje:{
-          minlength: 3,
-          maxlength: 200,
-        }
-      },
-
-
-      messages: {
+    $(function(){  
+      $("form[name='formulario']").validate({
+        rules:{
           nombre:{
-            required: "*Por favor, introduzca un nombre",
-            minlength:"*el nombre es muy corto"
+            required: true,
+            minlength: 3,
           },
-    
-          email:{
-          required: "*Por favor, introduzca un email",
-          email:"*Por favor, introduce una dirección de correo electrónico válida"
-        },
-
-        telefono:{
-          required: "*Por favor, introduzca un telefono",
-          number: "*Por favor, introduce un telefono válido"
-        },
-
-        fecha:{
-          Number: "Por favor, introduzca una fecha",
-        },
+          email: {
+            required: true,
+            email: true,
+          },
+          provincia:{
+            required: true,
+          },
+          telefono:{
+            required: true,
+            number: true,
+          },
+          
+          fecha:{
+            required: true,
+          },
           mensaje:{
-            minlength: "*el minimo de caracteres es de 3",
-            maxlength: "*el minimo de caracteres es de 3"
+            minlength: 3,
+            maxlength: 200,
           }
-      },
+        },
+
+
+        messages: {
+            nombre:{
+              required: "*Por favor, introduzca un nombre",
+              minlength:"*el nombre es muy corto"
+            },
+      
+            email:{
+            required: "*Por favor, introduzca un email",
+            email:"*Por favor, introduce una dirección de correo electrónico válida"
+          },
+
+          telefono:{
+            required: "*Por favor, introduzca un telefono",
+            number: "*Por favor, introduce un telefono válido"
+          },
+
+          fecha:{
+            Number: "Por favor, introduzca una fecha",
+          },
+            mensaje:{
+              minlength: "*el minimo de caracteres es de 3",
+              maxlength: "*el minimo de caracteres es de 3"
+            }
+        },
+
       submitHandler: function(form) {
 
         // Obtener los valores de los campos del formulario
