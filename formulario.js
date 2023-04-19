@@ -97,7 +97,7 @@ $(document).ready(function() {
       rules:{
         nombre:{
           required: true,
-          minlenght: 4,
+          minlength: 3,
         },
         email: {
           required: true,
@@ -108,41 +108,50 @@ $(document).ready(function() {
         },
         telefono:{
           required: true,
-          telefono: true,
+          number: true,
         },
         ciudad:{
           required: true,
-          minlenght: 3,
+          minlength: 2,
         },
         fecha:{
           required: true,
-          Date: true,
         },
-        mensaje: 'required'
+        mensaje:{
+          minlength: 3,
+          maxlength: 200,
+        }
       },
+
+
       messages: {
-
-        nombre:{
-          required: "Por favor, introduzca un nombre",
-          minlenght:"el nombre es muy corto"
+          nombre:{
+            required: "*Por favor, introduzca un nombre",
+            minlength:"*el nombre es muy corto"
+          },
+    
+          email:{
+          required: "*Por favor, introduzca un email",
+          email:"*Por favor, introduce una dirección de correo electrónico válida"
         },
-  
-        email:{
-        required: "Por favor, introduzca un email",
-        email:"Por favor, introduce una dirección de correo electrónico válida"
-      },
 
-      telefono:{
-        required: "Por favor, introduzca un telefono",
-        telefono: "Por favor, introduce un telefono válido"
-      },
+        telefono:{
+          required: "*Por favor, introduzca un telefono",
+          number: "*Por favor, introduce un telefono válido"
+        },
 
-      fecha:{
-        required: "Por favor, introduzca una fecha",
-        Date: "Por favor, introduce una fecha valida"
-      },
-      mensaje:'Por favor ingrese el motivo del contacto'
-      
+        ciudad:{
+          required: "*Por favor, introduzca su ciudad",
+          minlength: "*el nombre ingresado es muy corto"
+        },
+
+        fecha:{
+          Number: "Por favor, introduzca una fecha",
+        },
+          mensaje:{
+            minlength: "*el minimo de caracteres es de 3",
+            maxlength: "*el minimo de caracteres es de 3"
+          }
       },
       submitHandler: function(form) {
 
