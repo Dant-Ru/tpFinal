@@ -93,6 +93,8 @@ $(document).ready(function() {
         
         }
     });
+
+$(function() {
     $('#formulario-contacto').validate({
       rules:{
         nombre:{
@@ -181,7 +183,7 @@ $(document).ready(function() {
     });
   
   });
-
+});
 
   function generarPDF() {
     // Obtener los valores del formulario
