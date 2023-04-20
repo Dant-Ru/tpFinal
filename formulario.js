@@ -74,13 +74,12 @@ $(document).ready(function() {
             // Continuar con el resto del código de generación del PDF y descarga del archivo, si es necesario
             // ...
             // Crear un nuevo objeto jsPDF
+            
             var pdf = new jsPDF();
               
             pdf.text(cotizacion);
             pdf.save('imprecion.pdf') 
-          
-          
-            /*
+        
             // Agregar el resumen al documento PDF
             pdf.text(cotizacion, 10, 10);
 
@@ -95,13 +94,13 @@ $(document).ready(function() {
 
             // Liberar el objeto Blob
             URL.revokeObjectURL(pdfBlob);
-        */
+        
         }
     });
   });
 
     $(function(){  
-      $("#forumalario-contacto").validate({
+      $("form[name='forumalario-contacto']").validate({
         rules:{
           nombre:{
             required: true,
